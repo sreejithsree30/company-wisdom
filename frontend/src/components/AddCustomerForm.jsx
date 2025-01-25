@@ -26,7 +26,7 @@ const AddCustomerForm = ({ onCustomerAdded }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/customers", {
+      const response = await fetch("https://company-wisdom-e17ny4wr0-sreejithsree30s-projects.vercel.app/api/customers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

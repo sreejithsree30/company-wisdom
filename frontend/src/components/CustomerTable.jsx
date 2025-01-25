@@ -14,7 +14,7 @@ const CustomerTable = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/customers?page=${currentPage}&size=${pageSize}`);
+        const response = await fetch(`https://company-wisdom-e17ny4wr0-sreejithsree30s-projects.vercel.app/api/customers?page=${currentPage}&size=${pageSize}`);
         if (!response.ok) {
           throw new Error("Failed to fetch customers");
         }
@@ -42,7 +42,7 @@ const CustomerTable = () => {
 
   const handleDeleteClick = async (customerId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/customers/${customerId}`, {
+      const response = await fetch(`https://company-wisdom-e17ny4wr0-sreejithsree30s-projects.vercel.app/customers/${customerId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,7 @@ const CustomerTable = () => {
 
   const handleSaveClick = async (customerId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/customers/${customerId}`, {
+      const response = await fetch(`https://company-wisdom-e17ny4wr0-sreejithsree30s-projects.vercel.app/customers/${customerId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
